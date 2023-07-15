@@ -208,14 +208,6 @@
     color: whitesmoke;
   }
 
-
-
-  /* none  */
-
-.hide{
- display: none;
-}
-
   /*----------------
    Media Queries
    ----------------- */
@@ -282,11 +274,40 @@
       width:55px;
       height: 30px;
     }
+    .popular-collection{
+      grid-template-columns: repeat(1, 1fr);
+      margin-left: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .main-banner{
+      flex-direction: column-reverse;
+      text-align: center;
+      padding: 0;
+    }
+    .gear-duration{
+      text-align: center;
+      margin-right: 30px;
+    }
+    .gear-image img{
+      padding: 30px;
+      margin-left: 20px;
+    }
+    .join-btn{
+      margin-right: 50px;
+    }
+    
     body{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+          
+    /* Address */
+    .address{
+      padding: 10px;
+      margin: 0;
+    }
+
    }  
   
