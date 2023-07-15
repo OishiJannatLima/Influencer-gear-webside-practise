@@ -66,23 +66,28 @@
  /*-----------------
  products banner 
  --------------------*/
- .banner{
-    display: flex;
-    justify-content: center;
+.banner-container{
+  /* width: 650px;
+  height: 100px; */
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.banner{
+  display: flex;
+    border-top: 2px solid #bbc1c2;
+    border-bottom: 2px solid #bbc1c2;
+    border-left: none;
+    border-right: none;
+    margin-right: 30px;
+    /* padding: 5px; */
+    gap: 10px;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 40px;
-    border: 2px solid lightgray;
-    height: 60px;
-    padding: 10px;
-    margin: 100px 100px 100px;
-    margin-top: 15px;
-    border-left-color: white;
-    border-right-color: white;
- }
- .banner img{
-    width: 70px;
- }
-
+  
+}
+.banner img{
+  width: 30px;
+}
  /* -------------------
  popular collection
  --------------------- */
@@ -203,180 +208,85 @@
     color: whitesmoke;
   }
 
+
+
+  /* none  */
+
+.hide{
+ display: none;
+}
+
   /*----------------
    Media Queries
    ----------------- */
 
    /* Mobile Devices */
 
-   @media only screen and (max-width:668px) {
-    .nav-list, .header-container{
-      width: 100%;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+   @media only screen and (max-width: 688px){
     .main-section{
-      display: block;
-      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
     }
-    .main-section h3{        
-      font-size: 16px;
-      text-align: center;
-      font-weight: 400px;
-      margin-left:15px ;
+    .text{
+      margin: 0;
+      padding: 10px;
+
     }
-    .nav-list li{
+    .nav-list{
+      flex-direction: column;
+      margin: 0;
+      margin-left: 0;
+    }
+    /* camera section */
+    .main-container{
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 10px;
+      margin: 0;
+      position: 0;
+    }
+    img{
       width: 100%;
-      text-align: center;
-      padding: 5px;
-      background-color: aquamarine;
-      column-gap: 10px;
-      border-radius: 5px;
-   }
-   .text{
-    margin-left: 980px;
-    text-align: center;
-   }
-   .list i{
-    width: 100%;
-   }
-   .container{
-    margin-left: 10px;
-    text-align: center;
- }
- .main-container{
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-  background-image: none;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 90px;
-  position: relative;
-}
-.camera{
-  margin-bottom: 350px;
-  margin-right: 560px;
-  position: absolute;
-}
-.banner{
- border: none;
-  margin-left: 400px;
-}
-.popular-collection{
-  grid-template-columns: repeat(1,1fr);
-}
-.main-banner{
-  flex-direction: column-reverse;
-}
-.main-text{
-  
-  align-items: center;
-  margin-left: 30px;
-  margin-bottom: 20px;
-}
-.gear-image img{
-  margin-left: 30px;
-  justify-content: center;
-  align-items: center;
-}
-.address{
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
-  margin-left: 30px;
-}
-body{
-  margin: 0;
-  padding: 0;
-}
-
-   } 
-
-   /* ----------------
-    Tablet Devices 
-    ----------------- */
-    @media only screen and (min-width:688px) and (max-width:992px) {
-      .nav-list, .header-container{
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .main-section{
-        display: block;
-        text-align: center;
-      }
-      .main-section h3{        
-        font-size: 16px;
-        text-align: center;
-        font-weight: 400px;
-        margin-left:15px ;
-      }
-      .nav-list li{
-        width: 100%;
-        text-align: center;
-        padding: 5px;
-        background-color: aquamarine;
-        column-gap: 10px;
-        border-radius: 5px;
-     }
-     .text{
-      margin-left: 980px;
-      text-align: center;
-     }
-     .list i{
+    }
+    .camera{
+      padding: 0;
+      margin: 0;
+      margin-top: 0;
+      margin-left: 0;
+      margin-bottom: 300px;
+    }
+    .camera img{
       width: 100%;
-     }
-     .container{
-      margin-left: 10px;
+    }
+    .container{
+      position: 0;
+      margin-left: 0;
+      margin: 0;
       text-align: center;
-   }
-   .main-container{
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    background-image: none;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 90px;
-    position: relative;
-  }
-  .camera{
-    margin-bottom: 350px;
-    margin-right: 560px;
-    position: absolute;
-  }
-  .banner{
-   border: none;
-    margin-left: 400px;
-  }
-  .popular-collection{
-    grid-template-columns: repeat(2,1fr);
-  }
-  .main-banner{
-    flex-direction: column-reverse;
-  }
-  .main-text{
+      padding: 0;
+    }
+
+    /* banner */
+    .banner-container{
+      width: 100%;
+    }
+    .banner{
+      flex-wrap: wrap;
+      text-align: center;
+      gap: 20px;
+      border: none;
+      margin-top: 70px;
+    }
+    .banner img{
+      width:55px;
+      height: 30px;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     
-    align-items: center;
-    margin-left: 30px;
-    margin-bottom: 20px;
-  }
-  .gear-image img{
-    margin-left: 30px;
-    justify-content: center;
-    align-items: center;
-  }
-  .address{
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    margin-left: 30px;
-  }
-  body{
-    margin: 0;
-    padding: 0;
-  }
-    }
+   }  
+  
